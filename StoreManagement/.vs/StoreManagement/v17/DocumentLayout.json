@@ -71,8 +71,7 @@
               "RelativeToolTip": "StoreManagement\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T15:48:43.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:48:43.881Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "StoreManagement\\Data\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T15:47:17.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:47:17.554Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "StoreManagement\\StoreManagement.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-06T15:46:49.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:46:49.888Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "StoreManagement\\Models\\Course.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T15:43:30.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:43:30.176Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "StoreManagement\\Models\\Enrollments.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T15:42:33.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:42:33.123Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "StoreManagement\\Models\\Student.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T15:42:09.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:42:09.534Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "StoreManagement\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAABYAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T15:38:08.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:38:08.514Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "StoreManagement\\Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T15:38:02.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T15:38:02.927Z"
             }
           ]
         }
