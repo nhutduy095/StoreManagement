@@ -90,7 +90,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StoreManagement",
+              "Title": "StoreManagement.csproj",
               "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\StoreManagement.csproj",
               "RelativeDocumentMoniker": "StoreManagement\\StoreManagement.csproj",
               "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\StoreManagement.csproj",
@@ -147,7 +147,7 @@
               "RelativeDocumentMoniker": "StoreManagement\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "StoreManagement\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-06T15:38:08.514Z",
               "EditorCaption": ""
