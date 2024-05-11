@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FastFoodManagement") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

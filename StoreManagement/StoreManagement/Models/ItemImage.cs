@@ -1,6 +1,6 @@
 ﻿namespace StoreManagement.Models
 {
-    public class Image:BaseModel
+    public class ItemImage:BaseModel
     {
         public int ImageId { get; set; }
         public string ImageURL { get; set; }

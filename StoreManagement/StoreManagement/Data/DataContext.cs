@@ -21,7 +21,7 @@ namespace StoreManagement.Data
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
-        public DbSet<Image> Images { get; set; }
+        public DbSet<ItemImage> Images { get; set; }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
@@ -87,7 +87,7 @@ namespace StoreManagement.Data
                 entity.HasKey(e => e.OrderDtlId);
 
             });
-            modelBuilder.Entity<Image>(entity =>
+            modelBuilder.Entity<ItemImage>(entity =>
             {
                 entity.HasKey(e => e.ImageId);
 
