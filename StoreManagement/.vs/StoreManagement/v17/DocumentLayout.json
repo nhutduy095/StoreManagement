@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\carts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\carts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\views\\shop\\shopdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\views\\shop\\shopdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|d:\\dotnetcore\\storemanagement\\storemanagement\\storemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDCEAE2B-2E07-4CC6-BDD6-0003EF1542EE}|StoreManagement\\StoreManagement.csproj|solutionrelative:storemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Carts.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Carts.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\Carts.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Carts.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\Carts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:50.486Z",
+              "Title": "ShopDetail.cshtml",
+              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Views\\Shop\\ShopDetail.cshtml",
+              "RelativeDocumentMoniker": "StoreManagement\\Views\\Shop\\ShopDetail.cshtml",
+              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Views\\Shop\\ShopDetail.cshtml",
+              "RelativeToolTip": "StoreManagement\\Views\\Shop\\ShopDetail.cshtml",
+              "ViewState": "AQIAAOQAAAAAAAAAAAAAAJcBAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-12T08:44:44.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaseModel.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\BaseModel.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\BaseModel.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\BaseModel.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\BaseModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "StoreManagement\\Controllers\\ShopController.cs",
+              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "StoreManagement\\Controllers\\ShopController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:49.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Users.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\Users.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Users.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\Users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:39.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\LoginModel.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\LoginModel.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:36.189Z",
+              "WhenOpened": "2024-05-12T08:42:20.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Items.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Items.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\Items.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\Items.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\Items.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:29.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderDetails.cs",
-              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\OrderDetails.cs",
-              "RelativeDocumentMoniker": "StoreManagement\\Models\\OrderDetails.cs",
-              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Models\\OrderDetails.cs",
-              "RelativeToolTip": "StoreManagement\\Models\\OrderDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T14:50:09.278Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StoreManagement\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DotNetCore\\StoreManagement\\StoreManagement\\StoreManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StoreManagement\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAFEAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-12T08:07:32.581Z",
               "EditorCaption": ""
             }
           ]
