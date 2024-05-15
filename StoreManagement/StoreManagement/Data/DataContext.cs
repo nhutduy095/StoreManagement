@@ -23,13 +23,6 @@ namespace StoreManagement.Data
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<ItemImage> Images { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseSqlServer("Data Source=DUY-TRAM;Initial Catalog=OrderApp;Integrated Security=True;TrustServerCertificate=True");
-        //    }
-        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Items>(entity =>
