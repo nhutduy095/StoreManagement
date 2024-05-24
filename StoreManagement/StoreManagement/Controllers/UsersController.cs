@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StoreManagement.Data;
@@ -56,13 +52,20 @@ namespace StoreManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId,UserName,PassWord,Role,UserLevel,CreateBy,UpdateBy,CreateDate,UpdateDate,Active")] Users users)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(users);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(users);
+            users.CreateBy = "Admin";
+            users.UpdateBy = "Admin";
+            users.CreateDate = DateTime.Now;
+            users.UpdateDate = DateTime.Now;
+            _context.Add(users);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(users);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(users);
         }
 
         // GET: Users/Edit/5
@@ -92,8 +95,7 @@ namespace StoreManagement.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
                 try
                 {
@@ -111,9 +113,30 @@ namespace StoreManagement.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            return View(users);
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(users);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!UsersExists(users.UserId))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(users);
         }
 
         // GET: Users/Delete/5

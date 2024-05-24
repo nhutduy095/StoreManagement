@@ -56,13 +56,20 @@ namespace StoreManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CustomerId,CustomerName,CustomerCd,Email,Address,PhoneNumber,CreateBy,UpdateBy,CreateDate,UpdateDate,Active")] Customers customers)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(customers);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(customers);
+            customers.CreateBy = "Admin";
+            customers.UpdateBy = "Admin";
+            customers.CreateDate = DateTime.Now;
+            customers.UpdateDate = DateTime.Now;
+            _context.Add(customers);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(customers);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(customers);
         }
 
         // GET: Customers/Edit/5
@@ -92,8 +99,7 @@ namespace StoreManagement.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
                 try
                 {
@@ -111,9 +117,30 @@ namespace StoreManagement.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            return View(customers);
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(customers);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!CustomersExists(customers.CustomerId))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(customers);
         }
 
         // GET: Customers/Delete/5

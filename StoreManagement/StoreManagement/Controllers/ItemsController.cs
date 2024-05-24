@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StoreManagement.Data;
 using StoreManagement.Models;
@@ -56,13 +51,20 @@ namespace StoreManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ItemId,ItemName,Description,Price,CategoryId,CreateBy,UpdateBy,CreateDate,UpdateDate,Active")] Items items)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(items);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(items);
+            items.CreateBy = "Admin";
+            items.UpdateBy = "Admin";
+            items.CreateDate = DateTime.Now;
+            items.UpdateDate = DateTime.Now;
+            _context.Add(items);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(items);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(items);
         }
 
         // GET: Items/Edit/5
@@ -92,8 +94,7 @@ namespace StoreManagement.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
                 try
                 {
@@ -111,9 +112,31 @@ namespace StoreManagement.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(items);
+                
+                return RedirectToAction(nameof(Index));
+
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(items);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!ItemsExists(items.ItemId))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(items);
         }
 
         // GET: Items/Delete/5

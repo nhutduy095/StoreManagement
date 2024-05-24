@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="description" content="K System & Solution Co., Ltd Platform" />
+    <meta name="keywords" content="ksystem, hrm , accouting , sale" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OrderApp</title>
+    <link rel="stylesheet" href=@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css") />
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
+    <link rel="stylesheet" href=@Url.Content("~/css/login.css") />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true" />
+
+        <div class="signup">
+            <form name="myForm" action=@Url.Action("Register","Login")>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input id="usernamelogin" type="text" name="userName" placeholder="User name" required>
+                <input id="email" type="email" name="email" placeholder="Email" required>
+                <input id="tel" type="tel" name="usrtel" placeholder="PhoneNumber" required>
+                @*<p ng-show="myForm.email.$invalid">Nhập Email</p>*@
+                <input id="pass" type="passWord" name="passWord" placeholder="Password" required>
+                <button type="submit" id="btnSignUp" onclick="SignUp()">Sign up</button>
+                <!-- <button id="btnSignUp">Sign up</button>  -->
+            </form>
+        </div>
+
+        <div class="login">
+            <form action=@Url.Action("Login","Login")>
+                <!-- <label for="chk" aria-hidden="true">Login</label> -->
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="username" id="userName" name="userName" placeholder="UserName" required="Không được bỏ trống">
+                <input type="password" id="pswd" name="passWord" placeholder="passWord" required="Không được bỏ trống">
+                <button type="submit" onclick="Loginnn()">Login</button>
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    function Loginnn() {
+        $.ajax({
+            url: '@Url.Action("Login", "Login")',//"../../MealAdjustment/GetEmployeeInput",
+            type: "GET",
+            data: jQuery.param({ userName: $("#username").val(), passWord: $("#pswd").val() }),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                setTimeout(function () { removeloading(); }, 100);
+                $("#tbody tr[class='item']").remove();
+                if (data === "null") {
+                    $("#tbody").append("<tr class='item' data-dis='x'><td colspan='9' style='text-align:center'>No data is display</td>");
+                    return false;
+                }
+
+                Bind(data, 1);
+
+                setTimeout(sourceMeals, 10);
+                setTimeout(sourceCanteens, 10);
+                doOnLoad();
+            },
+            error: function (rs) {
+                console.log();
+            }
+        });
+
+    }
+</script>
+

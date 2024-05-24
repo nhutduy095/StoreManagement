@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StoreManagement.Data;
 using StoreManagement.Models;
@@ -56,13 +51,20 @@ namespace StoreManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CreateBy,UpdateBy,CreateDate,UpdateDate,Active")] Categories categories)
         {
-            if (ModelState.IsValid)
+            categories.CreateBy = "Admin";
+            categories.UpdateBy = "Admin";
+            categories.CreateDate = DateTime.Now;
+            categories.UpdateDate = DateTime.Now;
+            _context.Add(categories);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            /*if (ModelState.IsValid)
             {
                 _context.Add(categories);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            return View(categories);
+            }*/
+            //return View(categories);
         }
 
         // GET: Categories/Edit/5
@@ -77,6 +79,7 @@ namespace StoreManagement.Controllers
             if (categories == null)
             {
                 return NotFound();
+
             }
             return View(categories);
         }
