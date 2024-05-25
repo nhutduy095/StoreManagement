@@ -56,13 +56,20 @@ namespace StoreManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ComboId,ComboName,Description,Price,CreateBy,UpdateBy,CreateDate,UpdateDate,Active")] Combos combos)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(combos);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(combos);
+            combos.CreateBy = "Admin";
+            combos.UpdateBy = "Admin";
+            combos.CreateDate = DateTime.Now;
+            combos.UpdateDate = DateTime.Now;
+            _context.Add(combos);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(combos);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(combos);
         }
 
         // GET: Combos/Edit/5
@@ -92,8 +99,7 @@ namespace StoreManagement.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
                 try
                 {
@@ -111,9 +117,30 @@ namespace StoreManagement.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            return View(combos);
+            return RedirectToAction(nameof(Index));
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(combos);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!CombosExists(combos.ComboId))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(combos);
         }
 
         // GET: Combos/Delete/5
