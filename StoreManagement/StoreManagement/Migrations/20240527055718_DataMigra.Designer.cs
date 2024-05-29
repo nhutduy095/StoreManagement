@@ -12,8 +12,8 @@ using StoreManagement.Data;
 namespace StoreManagement.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240520091546_OrderAppDb")]
-    partial class OrderAppDb
+    [Migration("20240527055718_DataMigra")]
+    partial class DataMigra
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,9 @@ namespace StoreManagement.Migrations
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
+                    b.Property<int>("CartId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("CreateBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -47,6 +50,9 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ItemId1")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -63,6 +69,14 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("CartDtlId");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("CartId1");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("ItemId1");
 
                     b.ToTable("CartDetails");
                 });
@@ -96,11 +110,17 @@ namespace StoreManagement.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<int>("CustomerId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("GuestId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("GuestId1")
                         .HasColumnType("int");
 
                     b.Property<string>("PhoneNumber")
@@ -118,6 +138,14 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("CartId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("CustomerId1");
+
+                    b.HasIndex("GuestId");
+
+                    b.HasIndex("GuestId1");
 
                     b.ToTable("Carts");
                 });
@@ -154,6 +182,46 @@ namespace StoreManagement.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ComboItem", b =>
+                {
+                    b.Property<int>("ComboDtlId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComboDtlId"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ComboId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreateBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdateBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ComboDtlId");
+
+                    b.HasIndex("ComboId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("ComboItems");
                 });
 
             modelBuilder.Entity("StoreManagement.Models.Combos", b =>
@@ -333,6 +401,8 @@ namespace StoreManagement.Migrations
 
                     b.HasKey("ItemDtId");
 
+                    b.HasIndex("ItemId");
+
                     b.ToTable("ItemDetails");
                 });
 
@@ -372,6 +442,8 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("ImageId");
+
+                    b.HasIndex("ItemId");
 
                     b.ToTable("ItemImages");
                 });
@@ -437,7 +509,13 @@ namespace StoreManagement.Migrations
                     b.Property<int>("ItemId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ItemId1")
+                        .HasColumnType("int");
+
                     b.Property<int>("ItemMenuId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ItemTempId4")
                         .HasColumnType("int");
 
                     b.Property<string>("UpdateBy")
@@ -448,6 +526,14 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("ItemId1");
+
+                    b.HasIndex("ItemMenuId");
+
+                    b.HasIndex("ItemTempId4");
 
                     b.ToTable("ItemMenuDtls");
                 });
@@ -464,9 +550,6 @@ namespace StoreManagement.Migrations
                         .HasColumnType("bit");
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CombosComboId")
                         .HasColumnType("int");
 
                     b.Property<string>("CreateBy")
@@ -496,7 +579,7 @@ namespace StoreManagement.Migrations
 
                     b.HasKey("ItemId");
 
-                    b.HasIndex("CombosComboId");
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Items");
                 });
@@ -540,6 +623,10 @@ namespace StoreManagement.Migrations
 
                     b.HasKey("OrderDtlId");
 
+                    b.HasIndex("ItemMenuId");
+
+                    b.HasIndex("OrderId");
+
                     b.ToTable("OrderDetails");
                 });
 
@@ -560,6 +647,9 @@ namespace StoreManagement.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
 
                     b.Property<int>("GuestId")
                         .HasColumnType("int");
@@ -586,6 +676,10 @@ namespace StoreManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("OrderId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("GuestId");
 
                     b.ToTable("Orders");
                 });
@@ -677,10 +771,6 @@ namespace StoreManagement.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserLevel")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -690,16 +780,232 @@ namespace StoreManagement.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("StoreManagement.Models.CartDetails", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Carts", null)
+                        .WithMany()
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Carts", "Cart")
+                        .WithMany()
+                        .HasForeignKey("CartId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Items", null)
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Items", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Carts", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Customers", null)
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Customers", "Customer")
+                        .WithMany("Carts")
+                        .HasForeignKey("CustomerId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Guest", "Guest")
+                        .WithMany("Carts")
+                        .HasForeignKey("GuestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Guest", null)
+                        .WithMany()
+                        .HasForeignKey("GuestId1");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Guest");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ComboItem", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Combos", "Combo")
+                        .WithMany("ComboItems")
+                        .HasForeignKey("ComboId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Items", "Item")
+                        .WithMany("ComboItems")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Combo");
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ItemDetails", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Items", "Item")
+                        .WithMany("ItemDetails")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ItemImage", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Items", "Item")
+                        .WithMany("ItemImages")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ItemMenuDetail", b =>
+                {
+                    b.HasOne("StoreManagement.Models.ItemMenu", "ItemMenu")
+                        .WithMany("ItemMenuDetails")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Items", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.ItemMenu", null)
+                        .WithMany()
+                        .HasForeignKey("ItemMenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Items", null)
+                        .WithMany("ItemMenuDetails")
+                        .HasForeignKey("ItemTempId4")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("ItemMenu");
+                });
+
             modelBuilder.Entity("StoreManagement.Models.Items", b =>
                 {
-                    b.HasOne("StoreManagement.Models.Combos", null)
+                    b.HasOne("StoreManagement.Models.Categories", "Category")
                         .WithMany("Items")
-                        .HasForeignKey("CombosComboId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.OrderDetails", b =>
+                {
+                    b.HasOne("StoreManagement.Models.ItemMenu", "ItemMenu")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ItemMenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Orders", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ItemMenu");
+
+                    b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Orders", b =>
+                {
+                    b.HasOne("StoreManagement.Models.Customers", "Customers")
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreManagement.Models.Guest", "Guest")
+                        .WithMany("Orders")
+                        .HasForeignKey("GuestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customers");
+
+                    b.Navigation("Guest");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Categories", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("StoreManagement.Models.Combos", b =>
                 {
-                    b.Navigation("Items");
+                    b.Navigation("ComboItems");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Customers", b =>
+                {
+                    b.Navigation("Carts");
+
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Guest", b =>
+                {
+                    b.Navigation("Carts");
+
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.ItemMenu", b =>
+                {
+                    b.Navigation("ItemMenuDetails");
+
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Items", b =>
+                {
+                    b.Navigation("ComboItems");
+
+                    b.Navigation("ItemDetails");
+
+                    b.Navigation("ItemImages");
+
+                    b.Navigation("ItemMenuDetails");
+                });
+
+            modelBuilder.Entity("StoreManagement.Models.Orders", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }
